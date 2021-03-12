@@ -9,6 +9,5 @@ describe('adding a todo item to the todo list', () => {
         cy.get('.new-todo').type('Feed the cats{enter}')
 
         cy.contains('.todo-list li','Feed the cats').should('be.visible')
-    
     })    
 })
