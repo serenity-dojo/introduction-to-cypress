@@ -1,15 +1,7 @@
 /// <reference types="cypress"/>
 
-import { addTodo, addTodos } from '../actions/add'
-import { complete } from '../actions/complete'
-import { NewTodoForm } from '../page-components/new-todo-form';
-import { TodoListComponent } from '../page-components/todo-list-component';
-
 describe('When adding new todo items in the TODOMVC app', () => {
-
-    const todoList = new TodoListComponent()
-    const newTodoForm = new NewTodoForm();
-
+''
     beforeEach(() => {
         cy.visit('https://todomvc.com/examples/react/#/')
     })
@@ -21,6 +13,7 @@ describe('When adding new todo items in the TODOMVC app', () => {
     })
 
     it('Should not show the delete buttons by default', () => {
+
         cy.get('.new-todo').type('Feed the cat{enter}')
 
         cy.get('.todo-list li').should('have.length',1)
